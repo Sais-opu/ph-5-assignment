@@ -1,3 +1,10 @@
+// common function
+
+function getFieldValueById(id) {
+    const addM =parseFloat(document.getElementById(id).value)
+    return addM; 
+}
+
 document.getElementById('donate').addEventListener('click', function () {
     const input_1 = getFieldValueById('input-1')
     
