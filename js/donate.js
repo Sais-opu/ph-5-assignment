@@ -6,7 +6,8 @@
  * nok-money - coin
  * 
  */
-document.getElementById('donate-nok').addEventListener('click', function () {
+document.getElementById('donate-nok').addEventListener('click', function (event) {
+    event.preventDefault();
     const input_1 = getInputFieldValueById('input-1');
     const cash = getTextFieldValueById('limit');
     if(isNaN(input_1)){

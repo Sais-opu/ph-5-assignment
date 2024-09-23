@@ -9,3 +9,11 @@ function getTextFieldValueById(id) {
     const addText = parseFloat(document.getElementById(id).innerText);
     return addText;
 }
+
+// for hide
+function showSectionById(id) {
+    document.getElementById('show-cart').classList.add('hidden');
+    document.getElementById('show-history').classList.add('hidden');
+    // for show 
+    document.getElementById(id).classList.remove('hidden');
+}
