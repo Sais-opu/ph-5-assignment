@@ -19,6 +19,8 @@ document.getElementById('donate-nok').addEventListener('click', function (event)
         const total = input_1 + nokMoney;
         document.getElementById('nok-money').innerText = total;
         const newCash = cash - input_1;
+        // history
+        
         if (newCash >= 0) {
             document.getElementById('limit').innerText = newCash;
         }
