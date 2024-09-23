@@ -20,7 +20,11 @@ document.getElementById('donate-nok').addEventListener('click', function (event)
         document.getElementById('nok-money').innerText = total;
         const newCash = cash - input_1;
         // history
-        
+        const p = document.createElement('p');
+        p.innerText = `${total}Taka is Donated for famine-2024 at Feni, Bangladesh \n ${time}`;
+        // console.log(p)
+        document.getElementById('container').appendChild(p);
+
         if (newCash >= 0) {
             document.getElementById('limit').innerText = newCash;
         }
