@@ -14,11 +14,10 @@
 
 <body class="lexend">
     <main>
-        
-        <section class="">
-            <!-- navbar start -->
-            <nav>
-                <div class="navbar bg-base-100 py-5">
+        <!-- navbar start -->
+        <section >
+            <nav class="bg-yellow-50">
+                <div class="navbar py-5">
                     <div class="navbar-start">
                         <div class="dropdown">
                             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -37,7 +36,7 @@
                     </div>
                     <div class="navbar-end">
                         <img src="assets/coin.png" alt="">
-                        <div class="font-bold px-2">5500</div>
+                        <p id="limit" class="font-bold px-2">5500</p>
                         <h4 class="">BDT</h4>
                     </div>
                 </div>
@@ -58,7 +57,7 @@
                     <div>
                         <div class="flex bg-red-200 shadow-lg w-2/12 rounded-lg">
                             <img src="assets/coin.png" alt="">
-                            <p class="px-2 pt-1">0</p>
+                            <p id="nok-money" class="px-2 pt-1">0</p>
                             <h4 class=" pt-1">BDT</h4>
                         </div>
                         <h1 class="text-3xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
@@ -72,7 +71,7 @@
                             class="input input-bordered w-full " /><br>
                         <!-- modal -->
                         <!-- Open the modal using ID.showModal() method -->
-                        <button id="donate" class="btn  bg-[#B4F461] w-full" onclick="my_modal_1.showModal()">Donation
+                        <button id="donate-nok" class="btn  bg-[#B4F461] w-full" onclick="my_modal_1.showModal()">Donation
                             Now</button>
                         <dialog id="my_modal_1" class="modal text-center">
                             <div class="modal-box modal-middle text-center">
