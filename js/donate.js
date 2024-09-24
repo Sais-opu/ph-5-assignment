@@ -7,10 +7,8 @@
  * 
  */
 document.getElementById('donate-nok').addEventListener('click', function (event) {
-    // Ensure your logic here is correct
     const input_1 = getInputFieldValueById('input-1'); 
     const cash = getTextFieldValueById('limit'); 
-
     if (isNaN(input_1) || input_1 < 0) {
         alert('Failed to cash out.');
         return;
@@ -114,8 +112,6 @@ document.getElementById('donate-mov').addEventListener('click', function (event)
             alert('Not enough Money.');
             return; 
         }
-
-        
         document.getElementById('my_modal_1').showModal();
     }
 });
