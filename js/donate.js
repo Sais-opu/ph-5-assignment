@@ -10,7 +10,7 @@ document.getElementById('donate-nok').addEventListener('click', function (event)
     const input_1 = getInputFieldValueById('input-1'); 
     const cash = getTextFieldValueById('limit'); 
     if (isNaN(input_1) || input_1 < 0) {
-        alert('Failed to cash out.');
+        alert('Failed to Donate');
         return;
     }
 
@@ -24,7 +24,7 @@ document.getElementById('donate-nok').addEventListener('click', function (event)
         const p = document.createElement('p');
         const currentDate = new Date();
         const time = currentDate.toString();
-        p.innerHTML = `<p><strong>${input_1} Taka is Donated for famine-2024 at Noakhali, Bangladesh</strong> \n Date:${time}</P>`;
+        p.innerHTML = `<p><strong>${input_1} Taka is Donated for famine-2024 at Noakhali, Bangladesh</strong> <br> Date:${time}</P>`;
         div.appendChild(p);
         document.getElementById('container').appendChild(div);
 
@@ -63,7 +63,7 @@ document.getElementById('donate-feni').addEventListener('click', function (event
         const p = document.createElement('p');
         const currentDate = new Date();
         const time = currentDate.toString(); 
-        p.innerHTML = `<p><strong>${input_2} Taka is Donated for famine-2024 at Feni, Bangladesh</strong> \n Date:${time}</P>`;
+        p.innerHTML = `<p><strong>${input_2} Taka is Donated for famine-2024 at Feni, Bangladesh</strong> <br> Date:${time}</P>`;
         div.appendChild(p);
         document.getElementById('container').appendChild(div);
         if (newCash >= 0) {
