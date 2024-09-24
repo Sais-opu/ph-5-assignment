@@ -7,5 +7,6 @@ document.getElementById('btn-donation').addEventListener('click', function () {
 document.getElementById('btn-history').addEventListener('click', function () {
     // button
     showSectionById('btn-donation');
+    showSectionById('btn-history');
     showSectionById('container');
 })
