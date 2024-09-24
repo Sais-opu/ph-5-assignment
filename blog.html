@@ -50,29 +50,55 @@
         <div>
             <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-xl font-medium">What id the Document Object Model(DOM)?</div>
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>The Document Object Model (DOM) is a programming interface for web documents that represents the document as a tree of objects. It allows programming languages like JavaScript to interact with the document's content, structure, and style. The DOM consists of different types of nodes (elements, text, attributes, and comments) and enables dynamic manipulation of web pages, making them interactive. It is platform- and language-independent, meaning it can be used with various programming languages.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>You can select an element from the DOM using various JavaScript methods. Here are the most <br>
+                        1.Selects an element by its unique id - const element = document.getElementById('myId'); <br>
+                        2.Selects all elements with a specific class name - const elements = document.getElementsByClassName('myClass');<br>
+                    3.Selects all elements with a specific tag name (e.g., div, p) - const elements = document.getElementsByTagName('div');<br>
+                4.Selects the first element that matches a CSS selector - const element = document.querySelector('.myClass');<br>
+            5.Selects all elements that match a CSS selector. It returns a static NodeList - const elements = document.querySelectorAll('div.myClass');</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM and why is it useful?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>Event delegation is a technique in the DOM where a single event listener is added to a parent element to manage events for multiple child elements. Instead of attaching separate listeners to each child, the parent listens for events that bubble up from its children.
+
+                        Benefits of Event Delegation <br>
+                        1.Efficiency: Reduces the number of event listeners, improving performance. <br>
+                        2.Dynamic Handling: Automatically manages events for dynamically added elements. <br>
+                        3.Simplified Code: Centralizes event handling logic, making the code cleaner and easier to maintain. <br>
+                        This approach is particularly useful for handling events in scenarios with many similar elements or dynamically generated content.</p>
                 </div>
                 <div class="collapse collapse-arrow bg-base-200">
                     <input type="radio" name="my-accordion-2" />
                     <div class="collapse-title text-xl font-medium">How do you manipulate an element's attribtes and styles using the DOM?</div>
                     <div class="collapse-content">
-                        <p>hello</p>
+                        <p>Here’s a summary of the most commonly used methods for manipulating attributes and styles in the DOM:
+
+                            Manipulating Attributes:
+                            1.Get Attribute: element.getAttribute('attributeName') <br>
+                            2.Set Attribute: element.setAttribute('attributeName', 'newValue') <br>
+                            3.Remove Attribute: element.removeAttribute('attributeName') <br>
+                            4.Direct Access: element.id (for getting the id) and element.className = 'newClass' (for setting a class) <br>
+                            Manipulating Styles: <br>
+                            1.Get Style: element.style.propertyName <br>
+                            2.Set Style: element.style.propertyName = 'value' <br>
+                            3.Remove Style: element.style.propertyName = '' <br>
+                            Manage CSS Classes: <br>
+                            1.element.classList.add('newClass') (add class) <br>
+                            2.element.classList.remove('oldClass') (remove class) <br>
+                            3.element.classList.toggle('toggleClass') (toggle class) <br>
+                            These methods facilitate dynamic interaction and modifications of web page elements.</p>
                     </div>
                 </div>
             </div>
