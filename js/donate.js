@@ -103,7 +103,7 @@ document.getElementById('donate-mov').addEventListener('click', function (event)
         const currentDate = new Date();
         const time = currentDate.toString();
         
-        p.innerHTML = `<p><strong>${input_3} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</strong> \n Date:${time}</P>`;
+        p.innerHTML = `<p><strong>${input_3} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</strong> <br> Date:${time}</P>`;
         div.appendChild(p);
         document.getElementById('container').appendChild(div);
         if (newCash >= 0) {
