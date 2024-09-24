@@ -9,13 +9,16 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="lexend text-xl">
+<body class="lexend text-xl ">
     <main>
         <!-- navbar start -->
-        <section>
+        <section class="sticky top-0 z-50">
             <nav class="bg-yellow-50">
                 <div class="navbar py-5">
                     <div class="navbar-start">
@@ -41,20 +44,34 @@
                         <h4 class="">BDT</h4>
                     </div>
                 </div>
+
             </nav>
             <!-- navbar end -->
             <!-- donation and history button start -->
-            <div class="text-center m-10 ">
+            <!-- <div class="text-center p-4 backdrop-blur-lg ">
                 <button id="btn-donation"
                     class="btn btn-outline btn-success backdrop-blur font-semibold">Donation</button>
                 <button id="btn-history" class="btn btn-outline btn-success backdrop-blur font-medium">History</button>
+            </div> -->
+            <!-- testing -->
+            <div class="flex gap-4 justify-center p-5 backdrop-blur-lg">
+                <button id="btn-donation"
+                    class="bg-white text-black border border-gray-300 px-6 py-2 rounded-md transition duration-100 hover:bg-gray-300 focus:bg-[#B4F461] focus:outline-none">
+                    Button 1
+                </button>
+                <button id="btn-history"
+                    class="bg-white text-black border border-gray-300 px-6 py-2 rounded-md transition duration-200 hover:bg-gray-300 focus:bg-[#B4F461] focus:outline-none">
+                    Button 2
+                </button>
             </div>
+
             <!-- donation and history button end -->
         </section>
         <!-- card start-Noakhali -->
-        <section id="show-cart" class="px-32">
+        <section id="show-cart" class="px-96">
             <section>
-                <div class=" hero bg-base-100 shadow-xl border p-5  justify-center my-4 rounded-l-3xl">
+                <!-- shadow-xl border p-5  justify-center my-4 rounded-l-3xl -->
+                <div class=" hero bg-base-100  shadow-xl border p-5  justify-center my-4 rounded-l-3xl ">
                     <div class="hero-content flex-col lg:flex-row">
                         <img src='assets/noakhali.png' class="max-w-sm rounded-lg shadow-2xl  " />
                         <div>
@@ -100,7 +117,7 @@
             <!-- card end-Noakhali-->
             <!-- card start-Feni -->
             <section>
-                <div class="hero bg-base-100 shadow-xl border p-5  justify-center my-4 rounded-l-3xl">
+                <div class="hero bg-base-100 shadow-xl border p-5  justify-center  rounded-lg">
                     <div class="hero-content flex-col lg:flex-row">
                         <img src='assets/feni.png' class="max-w-sm rounded-lg shadow-2xl  " />
                         <div>
@@ -120,6 +137,7 @@
                             </p>
                             <input type="text" id="input-2" placeholder="Write Donation Amount"
                                 class="input input-bordered w-full text-light text-base " /><br>
+
                             <!-- modal -->
                             <!-- Button to trigger the modal -->
                             <button id="donate-feni" class="btn bg-[#B4F461] w-full my-3 font-semibold">Donation
@@ -170,7 +188,8 @@
                             <input type="text" id="input-3" placeholder="Write Donation Amount"
                                 class="input input-bordered w-full text-light text-base" /><br>
                             <!-- modal -->
-                            <button id="donate-mov" class="btn bg-[#B4F461] w-full my-3 font-semibold">Donation Now</button>
+                            <button id="donate-mov" class="btn bg-[#B4F461] w-full my-3 font-semibold">Donation
+                                Now</button>
                             <dialog id="my_modal_1" class="modal text-center">
                                 <div class="modal-box modal-middle text-center">
                                     <h3 class="text-5xl font-bold">Congrats!</h3>
@@ -186,7 +205,7 @@
                                     </div>
                                 </div>
                             </dialog>
-                            
+
                             <!-- modal end -->
                         </div>
                     </div>
@@ -196,13 +215,13 @@
         </section>
         <!-- history part start -->
 
-        <section id="container" class="hidden my-6 mx-auto max-w-2xl bg-gray-100 p-4 rounded shadow">
-            
+        <section id="container" class="hidden my-6 mx-auto max-w-2xl bg-gray-100  rounded ">
+
         </section>
         <!-- history part end -->
         <!-- footer -->
         <footer class=" bg-orange-50 pb-32">
-        
+
         </footer>
     </main>
     <script src="js/utillities.js"></script>
