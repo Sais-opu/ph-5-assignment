@@ -11,12 +11,12 @@ document.getElementById('donate-nok').addEventListener('click', function (event)
     const input_1 = getInputFieldValueById('input-1'); // Make sure this function exists and works correctly
     const cash = getTextFieldValueById('limit'); // Ensure this function is defined properly
     
-    if (isNaN(input_1)) {
+    if (isNaN(input_1) || input_1<0) {
         alert('Failed to cash out.');
         return;
     }
     
-    if (input_1 > 0) {
+    else {
         const nokMoney = getTextFieldValueById('nok-money');
         const total = input_1 + nokMoney;
         document.getElementById('nok-money').innerText = total;
@@ -36,9 +36,7 @@ document.getElementById('donate-nok').addEventListener('click', function (event)
 
         // Show the modal only if the donation is successful
         document.getElementById('my_modal_1').showModal();
-    } else {
-        alert('Negative number not acceptable');
-    }
+    } 
 });
 /** For feni
  * donate-feni = donate button 
@@ -47,14 +45,14 @@ document.getElementById('donate-nok').addEventListener('click', function (event)
  * 
  */
 document.getElementById('donate-feni').addEventListener('click', function (event) {
-    event.preventDefault();
+    
     const input_2 = getInputFieldValueById('input-2');
     const cash = getTextFieldValueById('limit');
-    if (isNaN(input_2)) {
+    if (isNaN(input_2) || input_2<0) {
         alert('Failed to cash out.');
         return;
     }
-    if (input_2 > 0) {
+    else {
         const fenMoney = getTextFieldValueById('feni-money');
         const total = input_2 + fenMoney;
         document.getElementById('feni-money').innerText = total;
@@ -73,9 +71,7 @@ document.getElementById('donate-feni').addEventListener('click', function (event
         }
         // Display the modal after a successful donation
         document.getElementById('my_modal_1').showModal();
-    } else {
-        alert('Negative number not acceptable');
-    }
+    } 
 });
 
 /** For Movement
@@ -86,15 +82,13 @@ document.getElementById('donate-feni').addEventListener('click', function (event
  */
 document.getElementById('donate-mov').addEventListener('click', function (event) {
     event.preventDefault();
-
-    const input_3 = getInputFieldValueById('input-3'); // Ensure this function exists and returns the value
-    const cash = getTextFieldValueById('limit');       // Ensure this function exists and returns the value
-
-    if (isNaN(input_3)) {
+    const input_3 = getInputFieldValueById('input-3'); 
+    const cash = getTextFieldValueById('limit');       
+    if (isNaN(input_3) || input_3<0) {
         alert('Failed to cash out.');
         return;
     }
-    if (input_3 > 0) {
+    else{
         const movMoney = getTextFieldValueById('mov-money'); // Ensure this function exists
         const total = input_3 + movMoney;
         document.getElementById('mov-money').innerText = total;
@@ -114,8 +108,6 @@ document.getElementById('donate-mov').addEventListener('click', function (event)
 
         // Show the modal after a successful donation
         document.getElementById('my_modal_1').showModal();
-    } else {
-        alert('Negative number not acceptable');
-    }
+    } 
 });
 
