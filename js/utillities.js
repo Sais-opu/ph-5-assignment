@@ -13,7 +13,7 @@ function getTextFieldValueById(id) {
 // for hide
 function showSectionById(id) {
     document.getElementById('show-cart').classList.add('hidden');
-    document.getElementById('show-history').classList.add('hidden');
+    document.getElementById('container').classList.add('hidden');
     // for show 
     document.getElementById(id).classList.remove('hidden');
 }

@@ -6,5 +6,5 @@ document.getElementById('btn-donation').addEventListener('click', function () {
 // For showing call from function history click
 document.getElementById('btn-history').addEventListener('click', function () {
     
-    showSectionById('show-history');
+    showSectionById('container');
 })
