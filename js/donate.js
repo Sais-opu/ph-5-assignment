@@ -1,9 +1,7 @@
 
 
 /** For noakhali
- * donate-nok = donate button 
- * input-1 - input form
- * nok-money - coin
+ * 
  * 
  */
 document.getElementById('donate-nok').addEventListener('click', function () {
@@ -40,9 +38,7 @@ document.getElementById('donate-nok').addEventListener('click', function () {
 });
 
 /** For feni
- * donate-feni = donate button 
- * input-2 - input form
- * feni-money - coin
+ * 
  * 
  */
 document.getElementById('donate-feni').addEventListener('click', function () {
@@ -77,9 +73,6 @@ document.getElementById('donate-feni').addEventListener('click', function () {
 
 
 /** For Movement
- * donate-mov = donate button 
- * input-3 - input form
- * mov-money - coin
  * 
  */
 document.getElementById('donate-mov').addEventListener('click', function (event) {
