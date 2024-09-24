@@ -6,33 +6,36 @@
  * nok-money - coin
  * 
  */
-document.getElementById('donate-nok').addEventListener('click', function (event) {
-    event.preventDefault();
-    const input_1 = getInputFieldValueById('input-1');
-    const cash = getTextFieldValueById('limit');
-    if(isNaN(input_1)){
+document.getElementById('donate-nok').addEventListener('click', function (event) { 
+    // Ensure your logic here is correct
+    const input_1 = getInputFieldValueById('input-1'); // Make sure this function exists and works correctly
+    const cash = getTextFieldValueById('limit'); // Ensure this function is defined properly
+    
+    if (isNaN(input_1)) {
         alert('Failed to cash out.');
         return;
     }
-    if (input_1>0 ) {
+    
+    if (input_1 > 0) {
         const nokMoney = getTextFieldValueById('nok-money');
         const total = input_1 + nokMoney;
         document.getElementById('nok-money').innerText = total;
         const newCash = cash - input_1;
-        // history
+
         const p = document.createElement('p');
+        const time = new Date().toLocaleString(); // Ensure time is defined
         p.innerText = `${total} Taka is Donated for famine-2024 at Noakhali, Bangladesh \n ${time}`;
-        // console.log(p)
         document.getElementById('container').appendChild(p);
 
         if (newCash >= 0) {
             document.getElementById('limit').innerText = newCash;
+        } else {
+            alert('Not enough Money.');
         }
-        else {
-            alert('Not enough Money.')
-        }
-    }
-    else {
+
+        // Show the modal only if the donation is successful
+        document.getElementById('my_modal_1').showModal();
+    } else {
         alert('Negative number not acceptable');
     }
 });
@@ -44,34 +47,41 @@ document.getElementById('donate-nok').addEventListener('click', function (event)
  */
 document.getElementById('donate-feni').addEventListener('click', function (event) {
     event.preventDefault();
+    
     const input_2 = getInputFieldValueById('input-2');
     const cash = getTextFieldValueById('limit');
-    if(isNaN(input_2)){
+    
+    if (isNaN(input_2)) {
         alert('Failed to cash out.');
         return;
     }
-    if (input_2>0 ) {
+    
+    if (input_2 > 0) {
         const fenMoney = getTextFieldValueById('feni-money');
         const total = input_2 + fenMoney;
         document.getElementById('feni-money').innerText = total;
         const newCash = cash - input_2;
-        // history
+        
+        // Adding the donation history
         const p = document.createElement('p');
+        const time = new Date().toLocaleString(); // Ensuring 'time' is defined
         p.innerText = `${total} Taka is Donated for famine-2024 at Feni, Bangladesh \n ${time}`;
-        // console.log(p)
         document.getElementById('container').appendChild(p);
-
+        
         if (newCash >= 0) {
             document.getElementById('limit').innerText = newCash;
+        } else {
+            alert('Not enough Money.');
+            return; // Exit function if not enough money
         }
-        else {
-            alert('Not enough Money.')
-        }
-    }
-    else {
+        
+        // Display the modal after a successful donation
+        document.getElementById('my_modal_1').showModal();
+    } else {
         alert('Negative number not acceptable');
     }
 });
+
 /** For Movement
  * donate-mov = donate button 
  * input-3 - input form
@@ -80,31 +90,36 @@ document.getElementById('donate-feni').addEventListener('click', function (event
  */
 document.getElementById('donate-mov').addEventListener('click', function (event) {
     event.preventDefault();
-    const input_3 = getInputFieldValueById('input-3');
-    const cash = getTextFieldValueById('limit');
-    if(isNaN(input_3)){
+
+    const input_3 = getInputFieldValueById('input-3'); // Ensure this function exists and returns the value
+    const cash = getTextFieldValueById('limit');       // Ensure this function exists and returns the value
+
+    if (isNaN(input_3)) {
         alert('Failed to cash out.');
         return;
     }
-    if (input_3>0 ) {
-        const movMoney = getTextFieldValueById('mov-money');
+
+    if (input_3 > 0) {
+        const movMoney = getTextFieldValueById('mov-money'); // Ensure this function exists
         const total = input_3 + movMoney;
         document.getElementById('mov-money').innerText = total;
         const newCash = cash - input_3;
-        // history
+        // Adding the donation history
         const p = document.createElement('p');
+        const time = new Date().toLocaleString(); // Make sure 'time' is defined properly
         p.innerText = `${total} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh \n ${time}`;
-        // console.log(p)
         document.getElementById('container').appendChild(p);
-
         if (newCash >= 0) {
             document.getElementById('limit').innerText = newCash;
+        } else {
+            alert('Not enough Money.');
+            return; // Exit the function if there is not enough money
         }
-        else {
-            alert('Not enough Money.')
-        }
-    }
-    else {
+
+        // Show the modal after a successful donation
+        document.getElementById('my_modal_1').showModal();
+    } else {
         alert('Negative number not acceptable');
     }
 });
+

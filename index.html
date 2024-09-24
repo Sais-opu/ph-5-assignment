@@ -75,18 +75,19 @@
                             <input id="input-1" type="text" placeholder="Write Donation Amount"
                                 class="input input-bordered w-full text-light text-base " /><br>
                             <!-- modal -->
-                            <button id="donate-nok" class="btn bg-[#B4F461] w-full my-3 font-semibold" onclick="my_modal_1.showModal()">Donation
+                            <button id="donate-nok" class="btn bg-[#B4F461] w-full my-3 font-semibold">Donation
                                 Now</button>
                             <dialog id="my_modal_1" class="modal text-center">
                                 <div class="modal-box modal-middle text-center">
                                     <h3 class="text-5xl font-bold">Congrats!</h3>
-                                    <img src="assets/coin.png" class="justify-center" alt="">
+                                    <div class="flex justify-center py-3"> <!-- Added this wrapper div -->
+                                        <img src="assets/coin.png" class="coin-img" alt="">
+                                    </div>
                                     <p class="py-4">You Have Donated for HumanKind</p>
                                     <h4 class="text-xl font-bold">Successfully</h4>
                                     <div class="modal-middle">
                                         <form method="dialog">
-                                            
-                                            <button class="btn ">close confirmation</button>
+                                            <button class="btn">Close Confirmation</button>
                                         </form>
                                     </div>
                                 </div>
@@ -120,23 +121,27 @@
                             <input type="text" id="input-2" placeholder="Write Donation Amount"
                                 class="input input-bordered w-full text-light text-base " /><br>
                             <!-- modal -->
-                            <button id="donate-feni" class="btn bg-[#B4F461] w-full my-3 font-semibold"
-                                onclick="my_modal_1.showModal()">Donation
+                            <!-- Button to trigger the modal -->
+                            <button id="donate-feni" class="btn bg-[#B4F461] w-full my-3 font-semibold">Donation
                                 Now</button>
+                            <!-- Modal structure -->
                             <dialog id="my_modal_1" class="modal text-center">
                                 <div class="modal-box modal-middle text-center">
                                     <h3 class="text-5xl font-bold">Congrats!</h3>
-                                    <img src="assets/coin.png" class="justify-center" alt="">
+                                    <div class="flex justify-center">
+                                        <!-- Added this wrapper div for centering the image -->
+                                        <img src="assets/coin.png" class="coin-img" alt="">
+                                    </div>
                                     <p class="py-4">You Have Donated for HumanKind</p>
                                     <h4 class="text-xl font-bold">Successfully</h4>
                                     <div class="modal-middle">
                                         <form method="dialog">
-                                            <!-- if there is a button in form, it will close the modal -->
-                                            <button class="btn ">close confirmation</button>
+                                            <button class="btn">Close Confirmation</button>
                                         </form>
                                     </div>
                                 </div>
                             </dialog>
+
                             <!-- modal end -->
                         </div>
                     </div>
@@ -166,23 +171,23 @@
                             <input type="text" id="input-3" placeholder="Write Donation Amount"
                                 class="input input-bordered w-full text-light text-base" /><br>
                             <!-- modal -->
-                            <button id="donate-mov" class="btn bg-[#B4F461] w-full my-3 font-semibold"
-                                onclick="my_modal_1.showModal()">Donation
-                                Now</button>
+                            <button id="donate-mov" class="btn bg-[#B4F461] w-full my-3 font-semibold">Donation Now</button>
                             <dialog id="my_modal_1" class="modal text-center">
                                 <div class="modal-box modal-middle text-center">
                                     <h3 class="text-5xl font-bold">Congrats!</h3>
-                                    <img src="assets/coin.png" class="justify-center" alt="">
+                                    <div class="flex justify-center">
+                                        <img src="assets/coin.png" class="coin-img" alt="">
+                                    </div>
                                     <p class="py-4">You Have Donated for HumanKind</p>
                                     <h4 class="text-xl font-bold">Successfully</h4>
                                     <div class="modal-middle">
                                         <form method="dialog">
-                                            <!-- if there is a button in form, it will close the modal -->
-                                            <button class="btn ">close confirmation</button>
+                                            <button class="btn">Close Confirmation</button>
                                         </form>
                                     </div>
                                 </div>
                             </dialog>
+                            
                             <!-- modal end -->
                         </div>
                     </div>
