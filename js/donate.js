@@ -27,16 +27,14 @@ document.getElementById('donate-nok').addEventListener('click', function (event)
         p.innerHTML = `<p><strong>${input_1} Taka is Donated for famine-2024 at Noakhali, Bangladesh</strong> <br> Date:${time}</P>`;
         div.appendChild(p);
         document.getElementById('container').appendChild(div);
-
         if (newCash >= 0) {
             document.getElementById('limit').innerText = newCash;
         } else {
             alert('Not enough Money.');
         }
-
-        
         document.getElementById('my_modal_1').showModal();
     }
+    
 });
 /** For feni
  * donate-feni = donate button 
