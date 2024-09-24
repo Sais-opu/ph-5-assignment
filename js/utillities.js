@@ -18,5 +18,5 @@ function showSectionById(id) {
     document.getElementById(id).classList.remove('hidden');
     // button
     document.getElementById('btn-donation').classList.remove('bg-[#B4F461]');
-    // document.getElementById('btn-donation').classList.add('bg-white');
+    document.getElementById('btn-donation').classList.add('bg-white');
 }
